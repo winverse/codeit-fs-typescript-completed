@@ -7,7 +7,7 @@ const memberProduct: {
   sizes: string[];
 } = {
   id: "c001",
-  name: "코드잇 블랙 후디",
+  name: "코드잇 블랙 후드",
   price: 129_000,
   membersOnly: true,
   sizes: ["M", "L", "XL"],
@@ -21,7 +21,7 @@ const guestProduct: {
   sizes: string[];
 } = {
   id: "c002",
-  name: "코드잇 화이트 후디",
+  name: "코드잇 화이트 후드",
   price: 119_000,
   sizes: ["S", "M"],
 };

@@ -8,7 +8,7 @@ function printProduct(product: {
 }
 
 printProduct({ name: "후드", price: 49_000 });
-// ❌ 오류: Property 'stock' is missing in type '{ name: string; price: number; }'
+// ❌ 오류: Property 'stock' is missing in type '{ name: string; price: number; }' but required in type '{ name: string; price: number; stock: number; }'
 
 printProduct({ name: "티셔츠", price: 29_000 });
-// ❌ 오류: Property 'stock' is missing in type '{ name: string; price: number; }'
+// ❌ 오류: Property 'stock' is missing in type '{ name: string; price: number; }' but required in type '{ name: string; price: number; stock: number; }'
