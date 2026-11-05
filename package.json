@@ -1,5 +1,5 @@
 {
-  "name": "codeit-fs-typescript-examples",
+  "name": "codeit-fs-typescript-completed",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -8,15 +8,11 @@
     "node": ">=24"
   },
   "scripts": {
-    "check": "tsc -p tsconfig.json",
-    "check:configs": "tsc -p examples/08/configs/options/tsconfig.json --noEmit && tsc -p examples/08/configs/extends/tsconfig.json",
-    "check:errors": "node scripts/check-intentional-errors.mjs",
-    "build:configs": "tsc -p examples/08/configs/extends/tsconfig.build.json",
-    "build:modules": "tsc -p examples/08/modules/tsconfig.json",
-    "start:modules": "node examples/08/modules/dist/main.js",
-    "format:check": "prettier --check ."
+    "build": "tsc",
+    "start": "node dist/main.js"
   },
   "devDependencies": {
+    "@types/node": "26.6.6",
     "prettier": "3.8.1",
     "typescript": "7.0.2"
   }
