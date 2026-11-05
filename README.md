@@ -16,7 +16,7 @@ pnpm start
 node dist/02/object-types.js
 ```
 
-`pnpm start`는 `dist/main.js`를 실행합니다. `src/02/unknown.ts`는 프로젝트 루트의 `price.json`을 읽으므로 이 폴더에서 실행합니다.
+`pnpm start`는 `dist/main.js`를 실행합니다. `src/02/unknown.ts`는 프로젝트 루트의 `price.json`을, `src/05/type-assertions.ts`는 `size.json`·`sizes.json`을 읽으므로 이 폴더에서 실행합니다.
 
 ## 8장 설정 상속
 

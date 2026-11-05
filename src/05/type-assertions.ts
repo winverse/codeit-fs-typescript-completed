@@ -1,10 +1,14 @@
-const unsafeParsedData: unknown = JSON.parse('{"size":"M"}');
+import fs from "fs/promises";
+
+const sizeJson = await fs.readFile("size.json", "utf-8");
+const unsafeParsedData: unknown = JSON.parse(sizeJson);
 
 // const unsafeSizes = unsafeParsedData as string[];
 // console.log(unsafeSizes.join(', '));
 // ↑ 컴파일은 통과하지만, 실제 값은 배열이 아니라서 실행하면 오류가 납니다.
 
-const parsedData: unknown = JSON.parse('["S", "M", "L"]');
+const sizesJson = await fs.readFile("sizes.json", "utf-8");
+const parsedData: unknown = JSON.parse(sizesJson);
 
 function hasOnlyStrings(value: unknown): boolean {
   return (
