@@ -18,10 +18,20 @@ node dist/02/object-types.js
 
 `pnpm start`는 `dist/main.js`를 실행합니다. `src/02/unknown.ts`는 프로젝트 루트의 `price.json`을, `src/05/type-assertions.ts`는 `size.json`·`sizes.json`을 읽으므로 이 폴더에서 실행합니다.
 
-## 8장 설정 상속
+## 8장 설정 나누기
 
-`configs` 폴더는 8장 02에서 설정 파일을 나눈 결과입니다. 다음 명령으로 `configs/tsconfig.build.json`을 적용해 빌드하면 `configs/dist/main.js`가 만들어집니다.
+`configs` 폴더는 8장 02에서 설정 파일을 나누고 8장 03에서 개발용·테스트용·배포용 설정을 더한 결과입니다. 프로젝트 루트에서 설정마다 빌드하고 실행하는 명령은 다음과 같습니다.
 
 ```bash
+# 개발용: configs/dist-dev에 .js와 소스 맵(.js.map)을 만듭니다
+pnpm exec tsc -p configs/tsconfig.dev.json
+node --enable-source-maps configs/dist-dev/main.js
+
+# 테스트용: configs/dist-test에 테스트 파일까지 만듭니다
+pnpm exec tsc -p configs/tsconfig.test.json
+node --enable-source-maps configs/dist-test/price.test.js
+
+# 배포용: configs/dist에 테스트 파일과 소스 맵 없이 만듭니다
 pnpm exec tsc -p configs/tsconfig.build.json
+node configs/dist/main.js
 ```

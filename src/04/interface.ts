@@ -25,6 +25,15 @@ function printProduct(product: Product): void {
 printProduct(product1); // 출력: 코드잇 블랙 후드 집업의 가격은 129000원입니다.
 printProduct(product2); // 출력: 코드잇 텀블러의 가격은 25000원입니다.
 
+const sticker = {
+  id: "s001",
+  name: "코드잇 스티커",
+  price: 3_000,
+  stock: 120,
+};
+
+printProduct(sticker); // 출력: 코드잇 스티커의 가격은 3000원입니다.
+
 interface ClothingProduct extends Product {
   sizes: string[];
   color: string;
