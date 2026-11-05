@@ -20,12 +20,12 @@ pnpm run check
 모듈 예제는 다음 명령으로 빌드한 뒤 실행합니다. 결과는 `examples/08/modules/dist/`에 만들어집니다.
 
 ```bash
-pnpm run build:modules
-pnpm run start:modules
+pnpm build:modules
+pnpm start:modules
 ```
 
 설정 상속 예제는 다음 명령으로 빌드합니다. 결과는 `examples/08/configs/extends/dist/`에 만들어집니다.
 
 ```bash
-pnpm run build:configs
+pnpm build:configs
 ```
