@@ -6,7 +6,7 @@
     "types": ["node"], // @types/node를 처음부터 타입 검사에 포함
     "strict": true, // 엄격한 타입 검사 규칙 켜기
     "noUncheckedIndexedAccess": true, // 배열 등에서 [ ]로 꺼낸 값도 undefined일 수 있다고 검사
-    "exactOptionalPropertyTypes": true, // 선택 프로퍼티에 undefined 직접 넣기 금지
+    "exactOptionalPropertyTypes": true, // 생략할 수 있는 프로퍼티에 undefined 직접 넣기 금지
     "verbatimModuleSyntax": true, // import·export 문을 적힌 그대로 출력
     "isolatedModules": true, // 파일 하나씩 변환해도 안전한 코드인지 검사
     "noUncheckedSideEffectImports": true, // 값 없이 가져오는 import도 경로 검사
