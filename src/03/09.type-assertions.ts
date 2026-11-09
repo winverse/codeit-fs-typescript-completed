@@ -17,7 +17,7 @@ function hasOnlyStrings(value: unknown): boolean {
 }
 
 if (hasOnlyStrings(parsedData)) {
-  // console.log(parsedData.join(", ")); // ❌ 오류: parsedData는 아직 unknown입니다
+  // console.log(parsedData.join(", ")); // ❌ 오류: 아직 unknown입니다
   const sizes = parsedData as string[];
   console.log(sizes.join(", ")); // 출력: S, M, L
 }
