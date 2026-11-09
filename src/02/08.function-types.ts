@@ -5,11 +5,12 @@ const stock: { [id: string]: number } = {
 const cart: string[] = [];
 
 function addToCart(id: string, quantity: number = 1): boolean {
-  if (stock[id] < quantity) {
+  const count = stock[id];
+  if (typeof count !== "number" || count < quantity) {
     return false;
   }
 
-  stock[id] -= quantity;
+  stock[id] = count - quantity;
   for (let i = 0; i < quantity; i++) {
     cart.push(id);
   }
