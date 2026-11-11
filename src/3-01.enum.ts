@@ -39,6 +39,12 @@ enum NumericDirection {
 
 console.log(NumericDirection.Left); // 출력: 2
 
+function printDirection(direction: NumericDirection): void {
+  console.log(`방향: ${direction}`);
+}
+
+printDirection(0); // 출력: 방향: 0
+
 enum StringDirection {
   Up = "UP",
   Down = "DOWN",
