@@ -2,7 +2,7 @@ const stock: { [id: string]: number } = {
   c001: 3,
   c002: 1,
 };
-const cart: string[] = [];
+const cart: { id: string; quantity: number }[] = [];
 
 function addToCart(id: string, quantity: number = 1): boolean {
   const count = stock[id];
@@ -11,9 +11,7 @@ function addToCart(id: string, quantity: number = 1): boolean {
   }
 
   stock[id] = count - quantity;
-  for (let i = 0; i < quantity; i++) {
-    cart.push(id);
-  }
+  cart.push({ id, quantity });
 
   return true;
 }
@@ -30,11 +28,11 @@ function printCart(title?: string): void {
   console.log(cart);
 }
 
-printCart(); // 출력: [ 'c001', 'c001', 'c001' ]
+printCart(); // 출력: [ { id: 'c001', quantity: 2 }, { id: 'c001', quantity: 1 } ]
 printCart("현재 장바구니");
 // 출력:
 // 현재 장바구니
-// [ 'c001', 'c001', 'c001' ]
+// [ { id: 'c001', quantity: 2 }, { id: 'c001', quantity: 1 } ]
 
 function addManyToCart(...ids: string[]): void {
   for (const id of ids) {
