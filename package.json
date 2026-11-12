@@ -8,10 +8,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "build": "pnpm build:prod",
-    "build:dev": "tsc -p tsconfig.dev.json",
-    "build:test": "tsc -p tsconfig.test.json",
-    "build:prod": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json",
     "start": "node dist/main.js"
   },
   "devDependencies": {

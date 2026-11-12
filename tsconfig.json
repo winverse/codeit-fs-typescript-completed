@@ -1,6 +1,18 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "target": "ES2022", // 출력할 JavaScript 문법 버전
+    "module": "NodeNext", // package.json의 type에 맞는 모듈 형식으로 출력
+    "moduleResolution": "NodeNext", // Node.js와 같은 규칙으로 import 경로 찾기
+    "types": ["node"], // @types/node를 처음부터 타입 검사에 포함
+    "strict": true, // 엄격한 타입 검사 규칙 켜기
+    "noUncheckedIndexedAccess": true, // 배열 등에서 [ ]로 꺼낸 값도 undefined일 수 있다고 검사
+    "exactOptionalPropertyTypes": true, // 생략할 수 있는 프로퍼티에 undefined 직접 넣기 금지
+    "verbatimModuleSyntax": true, // import·export 문을 적힌 그대로 출력
+    "isolatedModules": true, // 파일 하나씩 변환해도 안전한 코드인지 검사
+    "noUncheckedSideEffectImports": true, // 값 없이 가져오는 import도 경로 검사
+    "moduleDetection": "force", // import·export가 없는 파일도 모듈로 처리
+    "skipLibCheck": true, // 설치한 라이브러리의 타입 정보 파일 안 오류는 알리지 않음
+    "noEmitOnError": true, // 타입 오류가 있으면 JavaScript 파일을 만들지 않음
     "noEmit": true
   },
   "include": ["src/**/*.ts"] // 컴파일할 파일 범위
